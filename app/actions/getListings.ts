@@ -7,7 +7,15 @@ export default async function getListings() {
         createdAt: "desc",
       },
     });
-    return listings;
+    //we can do that too.
+    // return listings;
+
+    //here we are returning safe listing because we are passing date from server to client component and it'll show warning that we can't pass plain object.
+    const safeListings = listings.map((listing) => ({
+      ...listing,
+      createdAt: listing.createdAt.toISOString(),
+    }));
+    return safeListings;
   } catch (error: any) {
     throw new Error(error);
   }
