@@ -17,8 +17,8 @@ interface CountrySelectProps {
   onChange: (value: CountrySelectValue) => void;
 }
 
-const {getAll} = useCountries();
-console.log(getAll());
+// const {getAll} = useCountries();
+// console.log(getAll());
 
 const CountrySelect: React.FC<CountrySelectProps> = ({value, onChange}) => {
   const {getAll} = useCountries();
@@ -39,11 +39,11 @@ const CountrySelect: React.FC<CountrySelectProps> = ({value, onChange}) => {
             </div>
           </div>
         )}
-        className={{
-          control: () => "p-3 border-2",
-          input: () => "text-lg",
-          option: () => "text-lg",
-        }}
+        // className={{
+        //   control: () => "p-3 border-2",
+        //   input: () => "text-lg",
+        //   option: () => "text-lg",
+        // }}
         theme={(theme) => ({
           ...theme,
           borderRadius: 6,
