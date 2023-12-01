@@ -7,6 +7,7 @@ import {Toaster} from "react-hot-toast";
 import LoginModal from "./modal/LoginModal";
 import getCurrentUser from "./actions/getCurrentUser";
 import RentModal from "./modal/RentModal";
+import SearchModal from "./modal/SearchModal";
 const font = Nunito({
   subsets: ["latin"],
 });
@@ -30,6 +31,7 @@ export default async function RootLayout({
         {/* we don't need to use this now. */}
         {/* <ToasterProviders/> */}
         <Toaster />
+        <SearchModal />
         <LoginModal />
         <RentModal />
         <RegisterModal />
