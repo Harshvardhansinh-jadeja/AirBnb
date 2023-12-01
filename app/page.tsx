@@ -3,7 +3,7 @@ import getListings, {IListingsParams} from "./actions/getListings";
 import Container from "./components/Container";
 import EmptyState from "./components/EmptyState";
 import ListingCard from "./components/listings/ListingCard";
-
+export const dynamic = "force-dynamic";
 interface HomeProps {
   searchParams: IListingsParams;
 }
@@ -22,6 +22,7 @@ const Home = async ({searchParams}: HomeProps) => {
           // return <div>{listing.title}</div>;
           return (
             <ListingCard
+              //@ts-ignore
               currentUser={currentUser}
               key={listing.id}
               data={listing}

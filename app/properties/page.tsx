@@ -4,7 +4,7 @@ import getReservations from "../actions/getReservations";
 import EmptyState from "../components/EmptyState";
 import ClientOnly from "../components/navbar/ClientOnly";
 import PropertiesClient from "./PropertiesClient";
-
+export const dynamic = "force-dynamic";
 const PropertiesPage = async () => {
   const currentUser = await getCurrentUser();
 
@@ -21,7 +21,7 @@ const PropertiesPage = async () => {
       />
     );
   }
-
+  //@ts-ignore
   return <PropertiesClient listings={listings} currentUser={currentUser} />;
 };
 
